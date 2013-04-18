@@ -1,11 +1,9 @@
-<<<<<<< HEAD
-Puppet-Manifests
-================
-
-Puppet-Manifests
-=======
 Puppet-Modules
 ==============
 
-Puppet Modules
->>>>>>> 7296d2ab421c5017060b7dab313df4f2f3d5c445
+Puppet Modules used in API labs Cisco SPVTG. Used along with Razor for provisioning bare metal and vmware hosts and
+virtual machines.
+
+
+--Shobin Sathyan
+
