@@ -1,0 +1,19 @@
+name='<%= vm_name %>-install'
+
+kernel='/usr/xenguests/vmlinuz'
+ramdisk='/usr/xenguets/initrd.img'
+
+memory=<%= vm_memory %>
+vcpus=<%= vm_cpu %>
+
+vif=['mac=<%= vm_mac %>, bridge=<%= vm_bridge %>']
+disk=['phy:/dev/<%= vm_vg %>/<%= vm_name %>,xvda,w']
+
+#device_model='/usr/' + arch_libdir + '/xen/bin/qemu-dm'
+
+# Boots from CDROM. 
+# Change to 'c' after Linux installation in order to boot from disk.
+extra='text ks=http://<%= ks_ip %>/ks/<%= vm_name %>'
+on_reboot='destroy'
+on_shutdown='destroy'
+on_crash='destroy'

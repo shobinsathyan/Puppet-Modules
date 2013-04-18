@@ -1,0 +1,7 @@
+DEVICE=<%= name %>
+ONBOOT=yes
+TYPE=Bridge
+BOOTPROTO=static
+<% if address != "NONE" %>IPADDR=<%= address %><% end %>
+<% if netmask != "NONE" %>NETMASK=<%= netmask %><% end %>
+<% if gateway != "NONE" %>GATEWAY=<%= gateway %><% end %>

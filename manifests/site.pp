@@ -1,0 +1,10 @@
+import "modules"
+import "nodes.pp"
+import "templates.pp"
+import "VMHosts/xen/xenserver-puppet.pp"
+import "VMHosts/xen/openxen-puppet.pp"
+import "VMHosts/kvm/rhev02.pp"
+#import "VMHosts/vmware/api-cluster.pp"
+#import "VMHosts/openstack/openstack.pp"
+import "VMHosts/vmware/esxi5-0.pp"
+Exec { path => "/usr/bin:/usr/sbin/:/bin:/sbin" }

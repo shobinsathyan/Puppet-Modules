@@ -1,0 +1,24 @@
+name='<%= vm_name %>'
+
+kernel=''
+
+memory=<%= vm_memory %>
+vcpus=<%= vm_cpu %>	
+
+vif=['mac=<%= vm_mac %>, bridge=<%= vm_bridge %>']
+disk=['phy:/dev/<%= vm_vg %>/<%= vm_name %>,xvda,w']
+
+#device_model='/usr/' + arch_libdir + '/xen/bin/qemu-dm'
+
+# Boots from CDROM. 
+# Change to 'c' after Linux installation in order to boot from disk.
+boot='c' 
+
+extra=''
+on_reboot='restart'
+on_shutdown='destroy'
+ramdisk=''
+on_crash='restart'
+bootloader='/usr/bin/pygrub'
+root=''
+platform='xen'
